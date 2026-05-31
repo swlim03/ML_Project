@@ -5,7 +5,7 @@ Notebook with code snippet: [ML Project Notebook](EM_Detection/EM_Model.ipynb)
 
 *Disclaimer: The EM classification is based on Modified Jones Model (MJM) discretionary accruals using S&P Capital IQ data for academic purposes only. It does not imply any financial misconduct, as all figures are derived from publicly reported financial statements.*
 
-Research Articles refered for project design: [Reference Articles Folder](EM_Detection/Reference_Articles)
+Research Articles refered for project design: [Reference Articles](EM_Detection/Reference.md)
 
 # Research Question
 1. Do Malaysian firms perform extreme EM over years?
