@@ -85,6 +85,7 @@ Refer list of companies: [Consecutive_EM_CompanyList](EM_Detection/consecutive_e
 ## 2. How does firm profitability and size correlate with EM?
 Correlation Analysis on Net Income, Operating Cash Flow and Total Assets with EM
 ![Correlation Analysis Table](EM_Detection/Image/Correlation_Analysis.png)
+
 NI and OCF reflect a firm's profitability and earning qualities, while TA represents the operational capacity of a firm. 
 All three features are positively correlated with high negative EM and negatively correlated with high positive EM. OCF has the highest correlation at ±0.164 (t) and ±0.275 (t-1), indicating current year OCF has greater influence on EM than prior year OCF. In contrast, prior year NI and TA had higher correlation with EM than current year NI and TA.
 
