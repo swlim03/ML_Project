@@ -49,10 +49,12 @@ The dataset includes the following variables:
 ### EDA
 #### Descriptive Statistics of financial data across and discretionary accruals
 ![Descriptive Stats Diagram](EM_Detection/Image/Descriptive_Stats.png)
+
 The results show high dispersion in financial variables such as REV (1329.48), TA (3327.94), and PPE (2375.50), likely driven by firm size differences and cross-industry variation. In contrast, DA has a mean near zero with low variability (0.0595). While most values for variables like REV and OCF lie in the tens to hundreds range (e.g., REV Q1: 40.40, Q3: 373.02), extreme maximum values (e.g., REV: 12631.60, OCF: 4751.60) suggest strong right-skewness due to a few large firms. DA ranges from -0.3392 to 0.3083, indicating bidirectional earnings management.
 
 #### Distribution of Discretionary Accruals Across 5 Years
 ![DA Histogram Diagram](EM_Detection/Image/DA_Histogram.png)  
+
 The 2017 histogram is slightly right-skewed, indicating more firms with positive DA. In contrast, 2019 and 2020 are left-skewed, suggesting the presence of firms with unusually low (more negative) DA, indicating potential negative earnings management. Meanwhile, 2018 and 2021 show more symmetric DA distributions.
 
 ### Data Splitting
@@ -79,6 +81,7 @@ Performance Metrics used to evaluate model:
 # The Analysis
 ## 1. Do Malaysian firms perform extreme EM over years?
 More than one consecutive years, 94 companies among 187, are classified as implementing high negative or positive EM in more than one consecutive years.
+This suggests that the practice of EM is prevalent and is implemented over years. As the data source of this study is from Bursa Malaysia listed firms, the classified EM records are considered the strategic use of accounting choices within the financial reporting standards. Although such practices are within the legal and accounting boundaries, concerns remain, as they can mislead stakeholders about a firm’s actual financial health. 
 
 Refer list of companies: [Consecutive_EM_CompanyList](EM_Detection/consecutive_em_companies.xlsx)
 
@@ -89,9 +92,12 @@ Correlation Analysis on Net Income, Operating Cash Flow and Total Assets with EM
 NI and OCF reflect a firm's profitability and earning qualities, while TA represents the operational capacity of a firm. 
 All three features are positively correlated with high negative EM and negatively correlated with high positive EM. OCF has the highest correlation at ±0.164 (t) and ±0.275 (t-1), indicating current year OCF has greater influence on EM than prior year OCF. In contrast, prior year NI and TA had higher correlation with EM than current year NI and TA.
 
+A firm with strong profitability, cash flow and size may opt to conduct high negative EM (e.g. reducing current earnings) to smooth future performance or prevent overly high future expectations. In contrast, firms with lower profitability, cash flow and size may be more inclined to high positive EM (e.g. inflate current earnings), to meet performance targets or investor expectations. 
+
 ## 3. Which machine learning algorithms perform better in predicting EM?
 Performance of each default and random search tuned-model
 ![ML Model Performance Table](EM_Detection/Image/ML_Performance.png)
+
 The results show that the default XGB model achieve the best overall performance, closely followed by tuned-XGB. Tuned-GB ranks third, while default GB shows slightly lower but competitive performance.
 
 Model is ranked based on F1-score due to its ability to balance precision and recall under class imbalance. Overall, default XGB achieves the highest F1-score (0.7947), indicating the most effective trade-off between precision and recall.
@@ -101,6 +107,7 @@ Ensemble boosting methods consistently outperform single decision tree and rando
 ### Effect of Hyperparameter Tuning
 Default and Tuned Model F1-Score Comparison
 ![F1-Score Comparison Diagram](EM_Detection/Image/F1_Score.png)
+
 Decision Tree and Random Forest models, especially their tuned models, have relatively low F1-scores. This may be due to the underfitting of the tuned model, which will be weaker in capturing complex patterns in minority classes (high negative EM and high positive EM).
 
 # Conclusion
