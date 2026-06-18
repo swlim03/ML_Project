@@ -1,11 +1,20 @@
 # Overview
-This project applies Machine Learning to examine earnings management (EM) among Malaysian listed firms using tree-based models. It was originally developed as part of my undergraduate final semester research paper project.
+This project applies machine learning to examine earnings management (EM) among Malaysian listed firms using tree-based models. It was developed as part of an undergraduate final year research project.
 
 Notebook with code snippet: [ML Project Notebook](EM_Detection/EM_Model.ipynb)
 
-*Disclaimer: The EM classification is based on Modified Jones Model (MJM) discretionary accruals using S&P Capital IQ data for academic purposes only. It does not imply any financial misconduct, as all figures are derived from publicly reported financial statements.*
+*Disclaimer: EM classification is based on Modified Jones Model (MJM) discretionary accruals using S&P Capital IQ data for academic purposes only. It does not imply financial misconduct, as all values are derived from publicly available financial statements.*
 
-Research Articles refered for project design: [Reference Articles](EM_Detection/Reference.md)
+References: [Reference Articles](EM_Detection/Reference.md)
+
+# Introduction
+Financial statements are used for decision-making but may be affected by earnings management (EM) due to managerial discretion, reducing reporting reliability.
+
+Despite regulations such as IFRS, MCCG, and CMSA in Malaysia, EM practices still persist, indicating limitations in compliance-based control.
+
+Traditional methods like the Modified Jones Model (MJM) estimate discretionary accruals but struggle with nonlinear financial patterns. This motivates the use of machine learning for improved EM detection.
+
+This project applies MJM to label EM and evaluates tree-based machine learning models for prediction.
 
 # Research Question
 1. Do Malaysian firms perform extreme EM over years?
