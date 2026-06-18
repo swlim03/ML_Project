@@ -120,10 +120,11 @@ Default and Tuned Model F1-Score Comparison
 Decision Tree and Random Forest models, especially their tuned models, have relatively low F1-scores. This may be due to the underfitting of the tuned model, which will be weaker in capturing complex patterns in minority classes (high negative EM and high positive EM).
 
 # Conclusion
-This study employed tree-based machine learning models to predict EM among listed firms in Malaysia. Among the models tested, the Extreme Gradient Boost (XGB) model outperformed Gradient Boosting (GB), Random Forest (RF), and Decision Tree (DT) models. 
-While hyperparameter tuning improved the performance of XGB, it had minimal impact and even led to significant performance drop in the DT and RF models. 
-The correlation analysis between firm profitability and size, reflects the effort of firms to present a stable financial image. The study also reveals that about half of the Malaysian listed firms engaged in extreme EM over consecutive years.
+This study applies tree-based machine learning models to predict Earnings Management (EM) among Malaysian listed firms. Among the models evaluated, Extreme Gradient Boosting (XGBoost) outperforms Gradient Boosting (GB), Random Forest (RF), and Decision Tree (DT) models.
+
+Hyperparameter tuning provides only marginal improvement for XGBoost and does not consistently enhance performance for DT and RF, with some cases showing performance degradation. 
+
+Correlation analysis between firm size and profitability suggests potential earnings smoothing behavior. The results also indicate that nearly half of the firms exhibit persistent extreme EM across multiple years.
 
 ### Project Limitation
-Since the data is sourced from Malaysian listed firms, the detected EM remains within legal and accounting standards. 
-Based on MJM, the study focuses only on accrual-based earnings management (AEM), meaning real earnings management (REM) is not captured and may lead to incomplete detection.
+The dataset is limited to Malaysian listed firms, which may affect generalisability to other markets. In addition, the study focuses only on accrual-based earnings management (AEM) using the Modified Jones Model (MJM), indicating real earnings management (REM) is not captured.
