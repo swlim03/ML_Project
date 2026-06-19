@@ -1,5 +1,5 @@
 # Overview
-This project applies machine learning to examine earnings management (EM) among Malaysian listed firms using tree-based models.
+This project applies machine learning techniques to analyze earnings management (EM) among Malaysian listed firms, using Modified Jones Model (MJM) to compute discretionary accruals and tree-based models for EM classification.
 
 Notebook with code snippet: [ML Project Notebook](EM_Detection/EM_Model.ipynb)
 
